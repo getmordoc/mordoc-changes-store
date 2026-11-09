@@ -9,4 +9,4 @@ As a Mordoc contributor, I want every pull request to start from the same templa
 
 ## What
 - The same pull request template in every Mordoc repository: the code, the documentation, the app starter and the change documents.
-- The template links to the change, and asks for a description, the solution, the type of change, the tests and before and after visuals.
+- The template is the one already used in this repository, as the sample: [pull request template](../../.github/pull_request_template.md). It links to the change, and asks for a description, the solution, the type of change, the tests and before and after visuals.
