@@ -8,11 +8,13 @@ https://github.com/shiva-varanasi/mordoc-changes-store/tree/main/changes/<folder
 <How it is built: the main choices, and anything the reviewer should look at closely>
 
 ## Type of change
-- Bug fix (non-breaking change which fixes an issue)
-- New feature (non-breaking change which adds functionality)
-- Documentation update
-- Code cleanup
-- Test cases
+- feat: new functionality
+- fix: a bug fix
+- refactor: code restructured, behavior the same
+- perf: faster or lighter, behavior the same
+- test: tests only
+- docs: documentation only
+- chore: maintenance, such as tooling, templates, workflow or dependencies
 
 ## Tests
 - Describe in detail how the changes have been tested
