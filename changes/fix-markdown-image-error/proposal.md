@@ -45,4 +45,5 @@ As a site reader, I want pages with images to load with no errors, so that the p
 
 ## What
 - Pages with images load with no errors.
-- Images on their own line look and behave as they do today.
+- Every image, written in Markdown or with the image tag, shows as a plain image that opens larger when clicked, on its own line and inside a sentence.
+- An image's title shows when hovering over it, as in standard Markdown. A visible caption comes with the [figure tag](../feat-figure-tag/proposal.md).

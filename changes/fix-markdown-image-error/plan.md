@@ -6,15 +6,14 @@
 
 ## Approach
 - **FR-001:**
-  - `markdoc-config.ts` has a `paragraph` node that renders a paragraph holding only one image as that image, without the `<p>`.
-  - `Image` has an `inline` prop.
-  - The `image` node renders `Image` with `inline`, except in a paragraph that holds only that image.
-  - The `image` tag renders `Image` with `inline` when the Markdoc node is inline.
+  - `Image` renders a `<button type="button">` holding the `<img>`, with no `<figure>` or `<figcaption>`.
 - **FR-002:**
-  - `Image` without `inline` renders `<figure>` with `<img>` and `<figcaption>`, and the lightbox, as today.
+  - The button opens the existing lightbox.
+  - `Image.module.css` styles the button as an inline element, and the image with its current rounded corners and shadow.
 - **FR-003:**
-  - `Image` with `inline` renders a clickable `<img>` with the title as its `title` attribute, and the same lightbox.
+  - The `<img>` has the title as its `title` attribute.
 
 ## Decisions
-- **D-001:** Leave out the paragraph around an image on its own line, because the image keeps its `<figure>` and `<figcaption>`, which is valid HTML and tells screen readers it is a figure with a caption. Rejected: rendering the figure as `<span>` elements inside the paragraph.
-- **D-002:** Render an image inside a sentence as a plain `<img>`, because HTML allows no figure inside a paragraph. Rejected: splitting the sentence around a figure.
+- **D-001:** Render every image as an image without a figure, because HTML allows an image inside a paragraph, and the same syntax then always gives the same result. Rejected: rendering a figure only when the image is alone in a paragraph.
+- **D-002:** Open the image with a button, because a button is allowed inside a paragraph and works with the keyboard. Rejected: a click handler on the image.
+- **D-003:** Leave the visible caption to the [figure tag](../feat-figure-tag/proposal.md), because a caption needs a figure. Rejected: keeping the caption in this fix.
