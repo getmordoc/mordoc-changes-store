@@ -12,10 +12,10 @@
   - `npm run dev` for the development server
 
 ## Test Coverage
-- **AC-001:** Followed the README in the working copy: the site builds with no warnings and opens in the browser, built and in development. (Passed)
-- **AC-002:** Compared each page with the tags and attributes in `createDefaultMarkdocConfig()` and the sequence diagram syntax. Every page renders, with no raw Markdoc tags left. Left out until their bugs are fixed: a file download link and a diagram on the landing page. (Passed)
-- **AC-003:** Switched between light and dark theme; opened the accordions, played the clip, searched the site, opened the "page not found" screen through a link, and checked the diagram and the footer. The copy button on code blocks is not checked yet. The images page logs a browser error, see [fix-markdown-image-error](../fix-markdown-image-error/proposal.md). (Passed)
-- **AC-004:** `npm pack --dry-run` lists no files from `examples/`. (Passed)
-- **AC-005:** `git diff main -- src bin package.json` shows no changes. (Passed)
-- **NFR-002:** The site's own files are 99 KB. (Passed)
-- **NFR-004:** The site's `package.json` has no dependencies, and Mordoc's `package.json` is unchanged. (Passed)
+- **AC-001:** Follow the README in a fresh copy of the repository: the site builds with no warnings and opens in the browser, built and in the development server.
+- **AC-002:** Compare each page with the tags and attributes in `createDefaultMarkdocConfig()` and the sequence diagram syntax: every component and variation is on a page, every page renders, and no raw Markdoc tags are left.
+- **AC-003:** Open every page in light and dark theme: its feature is visible and works, and the browser console has no errors. This includes opening the accordions, playing the clip, searching the site, opening the "page not found" screen through a link, the copy button on code blocks, images on their own line, inside a sentence and inside a link, opening an advanced image larger and closing it, the diagram and the footer.
+- **AC-004:** `npm pack --dry-run` lists no files from `examples/`.
+- **AC-005:** `git diff main -- src bin package.json` shows no changes.
+- **NFR-002:** The site's own files are under 1 MB.
+- **NFR-004:** The site's `package.json` has no dependencies, and Mordoc's `package.json` is unchanged.
