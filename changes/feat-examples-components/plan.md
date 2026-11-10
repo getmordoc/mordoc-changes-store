@@ -32,7 +32,8 @@ examples/components/
 | `guide/buttons.md` | `button` |
 | `guide/text.md` | `heading` node, `{% table %}` |
 | `guide/links.md` | `link` node and tag, a link to an unknown route |
-| `media/images.md` | `image` node and tag |
+| `media/images.md` | `image` node and tag, on their own line, inside a sentence and inside a link |
+| `media/advanced-images.md` | `advancedImage` tag |
 | `media/video.md` | `clip`, `videoEmbed` |
 | `guide/accordions.md` | `accordion`, `accordions` |
 | `guide/columns.md` | `column`, `columns` |
@@ -54,7 +55,7 @@ examples/components/
   - `topnav.yaml` has two areas: Guide at `/guide` and Media at `/media`.
   - `headernav.yaml` has every `variant`.
   - `footer.yaml` has all three columns.
-  - `variables.yaml` is used in `guide/links.md` and `media/images.md`.
+  - `variables.yaml` is used in `guide/links.md`, `media/images.md` and `media/advanced-images.md`.
 
 ## Decisions
 - **D-001:** Run the repo's CLI directly, because it always uses the local code. Rejected: installing Mordoc in the site.
