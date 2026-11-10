@@ -45,5 +45,6 @@ As a site reader, I want pages with images to load with no errors, so that the p
 
 ## What
 - Pages with images load with no errors.
-- Every image, written in Markdown or with the image tag, shows as a plain image that opens larger when clicked, on its own line and inside a sentence.
-- An image's title shows when hovering over it, as in standard Markdown. A visible caption comes with the [figure tag](../feat-figure-tag/proposal.md).
+- Every image, written in Markdown or with the image tag, shows as a plain image with rounded corners and a shadow: on its own line, inside a sentence and inside a link. Its title shows when hovering over it.
+- A new figure tag has everything the image tag has today: a visible caption below the image, a hover effect, and opening larger when clicked. A figure stands on its own line.
+- The Mordoc documentation and the components example site describe images and figures as they work.
