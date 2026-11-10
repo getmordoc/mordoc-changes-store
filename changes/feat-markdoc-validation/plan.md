@@ -18,7 +18,28 @@
   - The `fence` node has the `process` attribute, as Markdoc's own `fence` node does.
   - The `fence` node builds its content from the transformed children when there are any, and from `content` otherwise, as Markdoc's own `fence` node does.
   - `CodeBlock` and `Diagram` receive that content.
+  - A code block whose transformed children include a tag that renders a component gets its `content`, as written.
+- **FR-006:**
+  - The components example site's `config/variables.yaml` has `apiBaseUrl` and `sdkVersion`.
+  - Its `media/images.md` puts an image tag inside a link, not a Markdown image.
+  - Its `guide/code.md` has a JavaScript code block that uses `apiBaseUrl`, a shell code block that uses `sdkVersion`, and a `{% process=false %}` code block with Markdoc syntax.
+- **FR-007:**
+  - The `link` node and the `link` tag allow the same children as Markdoc's own `link` node, including `tag`.
+- **FR-008:**
+  - The `advancedImage` tag's `inline: false` is reported by validation at the level `critical`.
+- **FR-009:**
+  - Every block tag has `inline: false`: callout, card, cardGrid, hero, section, accordion, accordions, column, columns, clip, videoEmbed, advancedImage and params.
+  - `image`, `link` and `button` have an explicit `inline: undefined`.
+  - `createDefaultMarkdocConfig()` throws when a tag has no `inline`.
+- **FR-010:**
+  - The `link` node, the `link` tag and the `button` tag have a `validate()` that reports, at the level `critical`, when one of their parents is a link or a button.
+- **FR-011:**
+  - `cardGrid`'s `cols` matches `1`, `2`, `3` or `4`.
 
 ## Decisions
 - **D-001:** Process and check code blocks as Markdoc does, with `{% process=false %}` to show one as written, because that is how Markdoc works. Rejected: treating every code block as raw text.
 - **D-002:** Stop the build on `error` and `critical`, and only report warnings, because some warnings may come from Mordoc's tag rules being too strict. Rejected: stopping on every problem.
+- **D-003:** Mordoc's versions of Markdoc's nodes allow exactly what Markdoc's own nodes allow, so a Markdown image inside a link is reported as Markdoc reports it. Rejected: allowing a Markdown image inside a link.
+- **D-004:** Allow every tag inside a processed code block, as Markdoc does, because a writer who does not want it marks the code block with `{% process=false %}`. Rejected: only allowing tags that produce text.
+- **D-005:** Until Mordoc can show components inside code blocks, show a code block with a component tag as written, because the page keeps working and nothing disappears silently. Showing components inside code blocks is a later change. Rejected: leaving the component out, and reporting it as a warning.
+- **D-006:** Each tag checks its own place, with `inline` and its own `validate()` looking at its parents, because Markdoc passes every node's parents to its validation and new or custom tags then bring their own rules. Rejected: a link checking every tag inside it.
