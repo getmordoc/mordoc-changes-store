@@ -9,7 +9,7 @@
 - The code and its behavior must stay unchanged.
 
 ## Test Coverage
-- **AC-001:** In every repository, open LICENSE and AUTHORS: LICENSE names "The Mordoc Authors" and, for the code repositories, has the MIT text from the plan; AUTHORS has the text from the plan.
+- **AC-001:** In every repository, open LICENSE and AUTHORS: LICENSE has the MIT text from the plan; AUTHORS has the text from the plan.
 - **AC-002:** Read each AUTHORS file: it has the heading line and the authors' names, and nothing more.
 - **AC-003:** In `package.json` of Mordoc, create-mordoc-app and the API demo site, the author is "The Mordoc Authors"; `npm pack --dry-run` of Mordoc includes the changed `package.json` and builds without errors.
 - **AC-004:** Open each repository on GitHub: GitHub recognizes its license, and shows the description, the topics and, for the documentation and API demo, the website from the plan.

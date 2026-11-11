@@ -10,7 +10,7 @@
 - **AC-005:** Given any Mordoc repository, when a visitor reads its README, then it says what the repository is and where the documentation is.
 
 ## Functional Requirements
-- **FR-001:** Every repository has a LICENSE file that names "The Mordoc Authors" as the copyright holder; the code repositories keep their MIT terms.
+- **FR-001:** Every repository has an MIT LICENSE file that names "The Mordoc Authors" as the copyright holder.
 - **FR-002:** Every repository has an AUTHORS file that lists the authors.
 - **FR-003:** The packages name "The Mordoc Authors" as their author.
 - **FR-004:** Every repository has a one-sentence description and topics on GitHub, written in the same style; a repository that publishes a website shows its address.
@@ -29,4 +29,4 @@
 - None
 
 ## Open Issues
-- Which license the API demo repository gets, for example CC BY 4.0 or MIT.
+- None
