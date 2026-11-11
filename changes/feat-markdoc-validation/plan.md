@@ -20,9 +20,9 @@
   - `CodeBlock` and `Diagram` receive that content.
   - A code block whose transformed children include a tag that renders a component gets its `content`, as written.
 - **FR-006:**
-  - The components example site's `config/variables.yaml` has `apiBaseUrl` and `sdkVersion`.
+  - The components example site's `config/variables.yaml` has `exampleApiBaseUrl` and `exampleSdkVersion`.
   - Its `media/images.md` puts an image tag inside a link, not a Markdown image.
-  - Its `guide/code.md` has a JavaScript code block that uses `apiBaseUrl`, a shell code block that uses `sdkVersion`, and a `{% process=false %}` code block with Markdoc syntax.
+  - Its `guide/code.md` has a JavaScript code block that uses `exampleApiBaseUrl`, a shell code block that uses `exampleSdkVersion`, and a `{% process=false %}` code block with Markdoc syntax.
 - **FR-007:**
   - The `link` node and the `link` tag allow the same children as Markdoc's own `link` node, including `tag`.
 - **FR-008:**
