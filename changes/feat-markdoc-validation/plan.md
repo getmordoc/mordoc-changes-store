@@ -38,7 +38,7 @@
 - **FR-010:**
   - The `link` node, the `link` tag and the `button` tag have a `validate()` that reports, at the level `critical`, when one of their parents is a link or a button.
 - **FR-011:**
-  - `cardGrid`'s `cols` matches `1`, `2`, `3` or `4`.
+  - `cardGrid`'s `cols` matches `1` up to `CARD_GRID_MAX_COLUMNS` (4), defined next to the `cardGrid` schema; `CardGrid` uses the value as it is.
 - **FR-012:**
   - There are two sets of tags: the article tags, and the landing tags, which are the article tags plus `hero` and `section`.
   - A page with `layout: landing` is validated and transformed with the landing tags; every other page and every text for the API reference with the article tags.
