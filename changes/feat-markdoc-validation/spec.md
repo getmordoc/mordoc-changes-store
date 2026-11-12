@@ -19,8 +19,8 @@
 - **AC-014:** Given a link or a button inside a link or a button, when the site is built, then the build stops and reports that one click can only go to one place.
 - **AC-015:** Given every tag in every place it can be written (on its own line, inside a sentence, inside a link, inside a button, and inside each block tag), when the pages are built and opened, then every page that validation lets through shows no browser errors, and every page that shows a browser error is stopped by validation.
 - **AC-016:** Given an enrichment file of the API reference with a mistake, such as an unknown tag, when the site is built, then the build stops and reports the file, the line and the problem.
-- **AC-017:** Given a hero or a section on a page that is not a landing page, when the site is built, then the build stops and reports the file, the line, and that the page needs `layout: landing` in its frontmatter.
-- **AC-018:** Given a hero or a section in an enrichment file of the API reference, when the site is built, then the build stops and reports the file, the line, and that it cannot be used in texts for the API reference.
+- **AC-017:** Given a hero or a section on a page that is not a landing page, when the site is built, then the build stops and reports the file, the line, and that the tag is not defined there.
+- **AC-018:** Given a hero or a section in an enrichment file of the API reference, when the site is built, then the build stops and reports the file, the line, and that the tag is not defined there.
 
 ## Functional Requirements
 - **FR-001:** Mordoc validates all Markdoc written for the site, in its pages and in the texts for the API reference, including code blocks, against Markdoc's rules and Mordoc's tags.
@@ -34,7 +34,7 @@
 - **FR-009:** Every tag states where it may stand; a block tag inside a sentence or a link stops the build.
 - **FR-010:** A link or a button inside a link or a button stops the build.
 - **FR-011:** An option only accepts the values its component supports.
-- **FR-012:** A hero or a section outside a landing page stops the build, with a message that says how to fix it.
+- **FR-012:** A hero or a section outside a landing page stops the build.
 
 ## Non-Functional Requirements
 - **NFR-001:** A page with no validation errors shows no browser errors and renders as written, so translated pages can be checked automatically.
