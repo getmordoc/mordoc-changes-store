@@ -8,10 +8,11 @@
 - Work in two repos: mordoc (the release) and mordoc-docs (the changelog and the move to 2.0.0, on a branch `chore-release-2-0-0`).
 - **FR-001:**
   - mordoc `package.json` and `package-lock.json` have `"version": "2.0.0"`, set by `npm version major --no-git-tag-version` on the branch `chore-release-2-0-0` and merged to `main` by pull request.
+  - mordoc `package.json` depends on `@markdoc/markdoc` `^0.5.12`, on the same branch.
   - The tag `v2.0.0` is created on `main` after the merge, on the commit that is published, and pushed to GitHub.
   - `mordoc@2.0.0` is published to npm from that commit, with `latest` pointing to it.
 - **FR-002:**
-  - `content/en/change-log/2026.md` and `content/de/change-log/2026.md` start with a section for the release date, with `### Version 2.0.0` and the new, changed and upgrade items from FR-002, linking to the pages on content validation, code blocks, advanced images and landing pages.
+  - `content/en/change-log/2026.md` and `content/de/change-log/2026.md` start with a section for the release date, with `### Version 2.0.0` and the new, changed and upgrade items from FR-002, linking to the pages on content validation, code blocks, advanced images and landing pages, and a line that Markdoc was updated to 0.5.12.
 - **FR-003:**
   - mordoc-docs `package.json` has `"mordoc": "^2.0.0"` and `"version": "2.0.0"`, with `package-lock.json` updated by `npm install`.
 
