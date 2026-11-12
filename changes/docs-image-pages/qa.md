@@ -15,3 +15,4 @@
 - **AC-004:** In the side navigation, Advanced Images comes right after Images in both places, and both links open.
 - **AC-005:** Repeat AC-001 to AC-004 on the German pages; the navigation shows Erweiterte Bilder.
 - **AC-006:** The build finishes, reports no problems, and Chrome shows no console errors on the four pages.
+- **AC-007:** Open Images under Writing Content, in English and German: the image tag section lists `src`, `alt` and `title`, which are exactly the image tag's attributes in Mordoc; the live example renders the image with its title on hover; the code block shows the tag as written.

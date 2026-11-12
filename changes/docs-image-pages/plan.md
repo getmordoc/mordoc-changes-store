@@ -15,6 +15,8 @@
 - **FR-003:**
   - `sidenav.yaml` has an Advanced Images entry right after each Images entry.
   - `translations/de.yaml` has `Advanced Images: Erweiterte Bilder`.
+- **FR-004:**
+  - `writing-content/images.md` has a section on `{% image src="…" alt="…" title="…" /%}`, its attributes, that it can be used for a variable source, and a link to advanced images, with a code block marked `{% process=false %}` and a live example.
 
 ## Decisions
 - **D-001:** Advanced images get their own pages, because every other component has its own page. Rejected: a section on the images pages.
