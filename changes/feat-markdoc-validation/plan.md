@@ -30,10 +30,10 @@
 - **FR-007:**
   - The `link` node and the `link` tag allow the same children as Markdoc's own `link` node, including `tag`.
 - **FR-008:**
-  - The `advancedImage` tag has a `validate()` that reports, at the level `critical`, when the tag is inline: `'advancedImage' can only stand on its own line.`
+  - The `advancedImage` tag's `inline: false` is reported by validation at the level `critical`.
 - **FR-009:**
-  - Every block tag has `inline: false`: callout, card, cardGrid, hero, section, accordion, accordions, column, columns, clip, videoEmbed and params.
-  - `image`, `link`, `button` and `advancedImage` have an explicit `inline: undefined`.
+  - Every block tag has `inline: false`: callout, card, cardGrid, hero, section, accordion, accordions, column, columns, clip, videoEmbed, advancedImage and params.
+  - `image`, `link` and `button` have an explicit `inline: undefined`.
   - `createDefaultMarkdocConfig()` throws when a tag has no `inline`.
 - **FR-010:**
   - The `link` node, the `link` tag and the `button` tag have a `validate()` that reports, at the level `critical`, when one of their parents is a link or a button.

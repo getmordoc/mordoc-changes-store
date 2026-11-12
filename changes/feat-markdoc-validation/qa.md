@@ -21,7 +21,7 @@
 - **AC-008:** Open the components example site's code page: the JavaScript and shell code blocks show the site's variable values, and the Markdoc syntax code block shows as written.
 - **AC-009:** Build a page with an image tag inside a link: no problem is reported; clicking the image opens the link.
 - **AC-010:** Build a page with a Markdown image inside a link: the build finishes and reports a warning with its file and line.
-- **AC-011:** Build a page with an advanced image inside a sentence, and one inside a link: each build stops and reports the file, the line, and that an advanced image can only stand on its own line.
+- **AC-011:** Build a page with an advanced image inside a sentence, and one inside a link: each build stops and reports the file, the line, and `'advancedImage' tag should be block`.
 - **AC-012:** Open a page with a code block that contains a callout tag and is not marked to be shown as written: it shows exactly what was written, and the console has no errors.
 - **AC-013:** Build a page with a callout inside a sentence, and one with a video inside a link: each build stops and reports the file and line.
 - **AC-014:** Build a page with a link inside a link, and one with a button inside a link: each build stops and reports that one click can only go to one place.
