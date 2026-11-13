@@ -9,6 +9,8 @@
 - **FR-001:**
   - mordoc `package.json` and `package-lock.json` have `"version": "2.0.0"`, set by `npm version major --no-git-tag-version` on the branch `chore-release-2-0-0` and merged to `main` by pull request.
   - mordoc `package.json` depends on `@markdoc/markdoc` `^0.5.12`, on the same branch.
+  - mordoc `package.json` has `repository` (`git+https://github.com/getmordoc/mordoc.git`), `homepage` (`https://mordoc.dev`) and `bugs` (`https://github.com/getmordoc/mordoc/issues`), replacing the misspelt `repoitory`.
+  - mordoc `package-lock.json` is created fresh with npm 11.19.1 on Node.js 24, so it has the dependency versions a new install gets.
   - The tag `v2.0.0` is created on `main` after the merge, on the commit that is published, and pushed to GitHub.
   - `mordoc@2.0.0` is published to npm from that commit, with `latest` pointing to it.
 - **FR-002:**
