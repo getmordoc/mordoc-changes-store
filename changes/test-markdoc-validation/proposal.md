@@ -8,7 +8,7 @@ As a Mordoc contributor, I want automated tests for content validation, so that 
 - Today validation is only checked by hand.
 
 ## What
-- Small test sites with deliberate mistakes, with only warnings, and with only correct content.
-- Tests that build each test site and check what validation reports and whether the build stops.
+- A small test site with deliberate mistakes, at every level validation reports.
+- Tests that build the test site and check what validation reports and whether the build stops.
 - One command that runs these tests, and a folder for all of Mordoc's tests, next to the browser tests that come later.
 - It builds on [content validation](../feat-markdoc-validation/proposal.md).
