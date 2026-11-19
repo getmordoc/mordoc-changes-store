@@ -3,20 +3,19 @@
 **Proposal:** [proposal.md](./proposal.md)
 
 ## Acceptance Criteria
-- **AC-001:** Given new versions of Mordoc's packages, when the weekly check runs, then one pull request proposes all minor and patch updates, and each major update has a pull request of its own.
-- **AC-002:** Given new versions of the actions in Mordoc's workflows, when the weekly check runs, then one pull request proposes them.
-- **AC-003:** Given an update pull request, when it is opened, then the tests run on it like on any other pull request.
-- **AC-004:** Given an editor that reads shared settings, when a contributor edits and saves a file, then it uses two spaces for indentation, Unix line endings and ends with an empty line.
-- **AC-005:** Given the shared editor settings, when they are compared with Mordoc's files, then every file already follows them.
+- **AC-001:** The maintainer gets pull requests that propose updates to Mordoc's packages and workflow actions.
+- **AC-002:** The maintainer is warned about security problems in Mordoc's packages, with a fix proposed.
+- **AC-003:** Contributors' editors save Mordoc's files the same way.
 
 ## Functional Requirements
-- **FR-001:** Once a week, Mordoc's packages are checked for new versions, and the updates are proposed as pull requests.
-  - Minor and patch updates are proposed together, each major update on its own.
-- **FR-002:** Once a week, the actions in Mordoc's workflows are checked for new versions, and the updates are proposed together in one pull request.
-- **FR-003:** Editors that read shared settings use the same indentation, line endings and end of file for every file in Mordoc.
+- **FR-001:** Once a week, Mordoc's packages are checked for new versions. Minor and patch updates are proposed together in one pull request, and each major update in a pull request of its own.
+- **FR-002:** Once a week, the actions in Mordoc's workflows are checked for new versions, and their updates are proposed together in one pull request.
+- **FR-003:** A known security problem in one of Mordoc's packages is reported, and its fix is proposed in a pull request as soon as it is known.
+- **FR-004:** The tests run on every update pull request, and the release notes list updates under maintenance.
+- **FR-005:** Editors that read shared settings use two spaces for indentation, Unix line endings and an empty line at the end of every file.
 
 ## Non-Functional Requirements
-- **NFR-001:** Existing files need no changes to follow the shared editor settings.
+- **NFR-001:** Mordoc's existing files already follow the shared editor settings.
 
 ## Boundaries
 - None
@@ -29,4 +28,4 @@
 - [Version strategy](../chore-version-strategy/proposal.md) also decides when dependencies are updated, and may change the weekly schedule.
 
 ## Open Issues
-- Confirm that security alerts and security updates are switched on in the repository's settings on GitHub.
+- None
