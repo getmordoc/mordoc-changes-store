@@ -21,7 +21,7 @@
 
 ## Non-Functional Requirements
 - **NFR-001:** The site looks the same for mouse users; keyboard users see where the keyboard is.
-- **NFR-002:** All of it works with VoiceOver on macOS and with the keyboard alone.
+- **NFR-002:** All of it works with the keyboard alone.
 
 ## Boundaries
 - None
