@@ -2,9 +2,9 @@
 
 **Proposal:** [proposal.md](./proposal.md)
 **Specification:** [spec.md](./spec.md)
-**QA plan:** [qa.md](./qa.md)
 
 ## Approach
+- Built in the `mordoc` repository.
 - Files are moved with `git mv`.
 - Target structure:
 
@@ -45,12 +45,13 @@ src/
 │   │   ├── loader.ts                   ← content-loader.ts
 │   │   ├── parse.ts                    ← content-parser.ts
 │   │   ├── transform.ts                ← content-transformer.ts
+│   │   ├── validation.ts               ← content-validation.ts: collects and reports Markdoc's validation results
 │   │   ├── slug.ts
 │   │   └── schema/                     ← split from markdoc-config.ts
-│   │       ├── index.ts                createDefaultMarkdocConfig()
+│   │       ├── index.ts                createArticleMarkdocConfig(), createLandingMarkdocConfig(), the tag lists and the placement check
 │   │       ├── nodes/                  overrides of standard Markdown syntax
 │   │       │   ├── index.ts
-│   │       │   ├── fence.ts
+│   │       │   ├── fence.ts            (incl. codeBlockContent helper, only used here)
 │   │       │   ├── heading.ts          (incl. extractText helper, only used here)
 │   │       │   ├── image.ts
 │   │       │   └── link.ts
@@ -58,10 +59,11 @@ src/
 │   │           ├── index.ts
 │   │           ├── accordion.ts
 │   │           ├── accordions.ts
+│   │           ├── advanced-image.ts
 │   │           ├── button.ts
 │   │           ├── callout.ts
 │   │           ├── card.ts
-│   │           ├── card-grid.ts
+│   │           ├── card-grid.ts        (incl. CARD_GRID_MAX_COLUMNS)
 │   │           ├── clip.ts
 │   │           ├── column.ts
 │   │           ├── columns.ts
@@ -141,6 +143,9 @@ src/
     │   │   ├── Accordions.tsx
     │   │   ├── Accordions.module.css
     │   │   └── accordions-context.ts
+    │   ├── advanced-image/
+    │   │   ├── AdvancedImage.tsx
+    │   │   └── AdvancedImage.module.css
     │   ├── button/                     ← content/landing/button/
     │   │   ├── Button.tsx
     │   │   └── Button.module.css
@@ -262,6 +267,7 @@ How one tag lines up after the change:
   - A feature with a build part and a display part has a folder in both `core/` and `app/`, with matching names.
   - There are no `shared/` or `utils/` folders. A helper lives next to its only user, and moves to the lowest folder that uses it once shared.
   - `cli/` has one folder per command. Code shared by commands is in `cli/vite/`.
+  - Comments that name a file or folder name its new path.
 - **FR-002:**
   - Each folder imports only from the folders in the "May import from" column.
   - `app/tsconfig.json` includes only `../types`.
@@ -269,7 +275,7 @@ How one tag lines up after the change:
   - `types/` holds types only, no code.
   - `CONDITIONAL_BADGE` is in `core/openapi/badges.ts`, and `scene.ts` is in `types/`.
 - **FR-004:**
-  - `createDefaultMarkdocConfig()` returns the same nodes and tags, with one file per tag in `core/content/schema/tags/`.
+  - `createArticleMarkdocConfig()` and `createLandingMarkdocConfig()` return the same nodes and tags, with one file per tag in `core/content/schema/tags/`.
 - **FR-005:**
   - `bin/cli.js` is only the entry point and calls `cli/<command>/index.ts`.
   - `paths.ts` finds the package root one folder deeper: `'../../../..'`.
@@ -277,4 +283,4 @@ How one tag lines up after the change:
   - The build script clears `dist/` before compiling.
 
 ## Decisions
-- **D-001:** `core/content/` and `app/components/` as folder names, because they say what the code does. Rejected: `markdoc/`, because it suggests Stripe's code. To be confirmed, see Open Issues in the [spec](./spec.md).
+- **D-001:** `core/content/` and `app/components/` as folder names, because they say what the code does. Rejected: `markdoc/`, because it suggests Stripe's code.
