@@ -10,3 +10,4 @@ As a reader, I want the sidebar to mark only the page I am on, so that I always 
 
 ## What
 - Only the current page is marked in the sidebar and the other navigation, whether the address ends in a slash or not.
+- Every page address ends in a slash, like `/getting-started/run-locally/`, which matches how Mordoc stores each page and avoids a detour on most hosts.
