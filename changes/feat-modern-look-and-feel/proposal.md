@@ -12,6 +12,9 @@ As a documentation owner, I want my Mordoc site to look calm and modern out of t
 - A sidebar where each category starts below a thin horizontal line, with a larger and bolder category title.
 - Each main heading on a page starts below a thin horizontal line, so a page reads as clear sections; owners who want numbered steps write the numbers in the headings themselves.
 - Calmer text colors and spacing for headings, body text and the "On this page" list.
-- Dark code blocks in both light and dark mode, so code stands out from the text around it.
+- Code in each computer's own code font, never in a typewriter font.- Code blocks with a darker grey title bar, light in light mode and dark in dark mode, so code stands out from the text around it.
 - Mordoc's red accent color stays, in light and dark mode.
+- A light grey header on every page and a slightly darker hero banner on landing pages, by default.
+- A loading animation with grey bars and a lighter band moving across, while a page loads.
+- Colors taken from Material Design wherever one closely matches the current color, so the site looks the same but uses a known palette.
 - Site owners can still change the look with their own styles, as they can today.
