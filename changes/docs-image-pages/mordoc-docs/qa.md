@@ -1,8 +1,6 @@
 # Document images and advanced images: QA Plan
 
-**Proposal:** [proposal.md](./proposal.md)
-**Specification:** [spec.md](./spec.md)
-**Technical plan:** [plan.md](./plan.md)
+**Change:** `docs-image-pages`
 
 ## Test Strategy
 - Build mordoc-docs with local Mordoc `main` (`node ../mordoc/bin/cli.js build`) and check the pages in Chrome, in English and German.

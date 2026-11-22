@@ -1,8 +1,6 @@
 # Release Mordoc 2.0.0: QA Plan
 
-**Proposal:** [proposal.md](./proposal.md)
-**Specification:** [spec.md](./spec.md)
-**Technical plan:** [plan.md](./plan.md)
+**Change:** `chore-release-2-0-0`
 
 ## Test Strategy
 - Before publishing: build mordoc-docs, the components example site and mordoc-api-demo with local Mordoc `main`; each finishes with no problems reported.

@@ -4,5 +4,5 @@
 **QA plan:** [qa.md](./qa.md)
 
 ## Tasks
-- [ ] **T-001 (FR-006):** Remove the `changes/` folder.
-- [ ] **T-002 (FR-006):** Ask for the plain-text folder of the change in the pull request template's Change section.
+- [x] **T-001 (FR-006):** Remove the `changes/` folder.
+- [x] **T-002 (FR-006):** Ask for the plain-text folder of the change in the pull request template's Change section.

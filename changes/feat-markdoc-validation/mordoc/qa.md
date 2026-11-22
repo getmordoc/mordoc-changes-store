@@ -1,8 +1,6 @@
 # Validate Markdoc content: QA Plan
 
-**Proposal:** [proposal.md](./proposal.md)
-**Specification:** [spec.md](./spec.md)
-**Technical plan:** [plan.md](./plan.md)
+**Change:** `feat-markdoc-validation`
 
 ## Test Strategy
 - Build test sites with Mordoc from this change's branch: the components example site, a copy of it with test pages that contain each kind of mistake, a copy of the Mordoc documentation, and a copy of the API demo site. Check the build output, the built pages in Chrome, and the development server.

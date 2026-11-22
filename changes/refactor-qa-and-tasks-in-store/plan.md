@@ -13,7 +13,7 @@
 - **FR-003:**
   - Each moved `qa.md` and `tasks.md` starts with `**Change:** \`<change>\``, followed by its link to `tasks.md` or `qa.md` when that file is next to it.
 - **FR-004:**
-  - The 13 links to other changes, in 11 documents, are the change's folder name in backticks.
+  - The 12 links to other changes are the change's folder name in backticks.
   - The 10 plans with a `**QA plan:**` line have none.
 - **FR-005:**
   - The README's "How a change is documented" has the folder tree of a change with a repository subfolder, in place of the sentence about the code repositories' `changes/` folders.

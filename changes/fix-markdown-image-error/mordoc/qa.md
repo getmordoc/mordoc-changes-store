@@ -1,8 +1,6 @@
 # Markdown images cause a browser error: QA Plan
 
-**Proposal:** [proposal.md](./proposal.md)
-**Specification:** [spec.md](./spec.md)
-**Technical plan:** [plan.md](./plan.md)
+**Change:** `fix-markdown-image-error`
 
 ## Test Strategy
 - Manual checks in Chrome on built sites, served as static files, with Mordoc built from this change's branch. Each site is also built with Mordoc from `main`, to compare.

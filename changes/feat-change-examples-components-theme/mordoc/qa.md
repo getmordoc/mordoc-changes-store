@@ -1,8 +1,6 @@
 # Journey theme for the components example site: QA Plan
 
-**Proposal:** [proposal.md](./proposal.md)
-**Specification:** [spec.md](./spec.md)
-**Technical plan:** [plan.md](./plan.md)
+**Change:** `feat-change-examples-components-theme`
 
 ## Test Strategy
 - Build the site from this change's branch and open every page in Chrome, in light and dark theme. Compare each page's tags and attributes with the site on `main`.

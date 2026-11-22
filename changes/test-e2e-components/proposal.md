@@ -5,7 +5,7 @@ As a Mordoc contributor, I want browser tests that check every component and int
 
 ## Why
 - Mordoc's tests only check content validation; nothing checks what readers see.
-- The [components example site](../feat-examples-components/proposal.md) shows every component, but nothing checks that they keep working.
+- The components example site (`feat-examples-components`) shows every component, but nothing checks that they keep working.
 
 ## What
 - Tests for the components example site, which check that each component works in both the light and the dark theme.
