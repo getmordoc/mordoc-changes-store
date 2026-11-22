@@ -25,7 +25,7 @@
 
 ## Risks
 - A major update can need real work before its pull request can be merged.
-- [Version strategy](../chore-version-strategy/proposal.md) also decides when dependencies are updated, and may change the weekly schedule.
+- A version strategy may also decide when dependencies are updated, and may change the weekly schedule.
 
 ## Open Issues
 - None

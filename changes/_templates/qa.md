@@ -1,6 +1,6 @@
 # <Change title>: QA Plan
 
-**Change:** `<repository>/changes/<type>-<short-name>`
+**Change:** `<type>-<short-name>`
 **Tasks:** [tasks.md](./tasks.md)
 
 ## Test Strategy
@@ -8,4 +8,4 @@
 - <Required setup and commands to run>
 
 ## Test Coverage
-- **AC-001:** <How it is verified in this repository, including error cases>
+- **AC-001:** <How it is verified in this repository, including the rules in the functional requirements behind it and error cases>

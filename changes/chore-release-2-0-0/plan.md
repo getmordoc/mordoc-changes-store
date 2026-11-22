@@ -2,7 +2,6 @@
 
 **Proposal:** [proposal.md](./proposal.md)
 **Specification:** [spec.md](./spec.md)
-**QA plan:** [qa.md](./qa.md)
 
 ## Approach
 - Work in two repos: mordoc (the release) and mordoc-docs (the changelog and the move to 2.0.0, on a branch `chore-release-2-0-0`).
