@@ -2,7 +2,7 @@
 
 How Mordoc is built, spec-first: a proposal, specification and plan for every change.
 
-Mordoc is built with spec-driven development. Before any code is written, each change is described here in plain language, using the templates in [`changes/_templates/`](changes/_templates), and reviewed. The pull request in the code repository shows how the change was tested.
+Mordoc is built with spec-driven development. Before any code is written, each change is described here in plain language and reviewed. The pull request in the code repository shows how the change was tested.
 
 ## How a change is documented
 
@@ -26,7 +26,7 @@ Read the Mordoc documentation at [mordoc.dev](https://mordoc.dev).
 
 Open any folder in [`changes/`](changes) and read its documents in the order above.
 
-To start a new change, copy the templates in [`changes/_templates/`](changes/_templates).
+New changes are started with the changes workflow, which brings the templates.
 
 ## License
 
