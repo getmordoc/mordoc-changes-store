@@ -1,6 +1,6 @@
 # <Change title>: Tasks
 
-**Change:** `<repository>/changes/<type>-<short-name>`
+**Change:** `<type>-<short-name>`
 **QA plan:** [qa.md](./qa.md)
 
 ## Tasks
