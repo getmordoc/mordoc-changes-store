@@ -21,7 +21,7 @@
 - **FR-005:**
   - `.github/release.yml` groups the generated notes by these labels, with the rest under "Other changes".
 - **FR-006:**
-  - After the release, the job runs `npm version minor --no-git-tag-version` on a branch `chore-bump-version-to-<next version>`, pushes it and opens a pull request with `gh pr create`.
+  - After the release, the job runs `npm version minor --no-git-tag-version` on a branch `chore-bump-version-to-<next version>` and pushes it.
 - **NFR-001:**
   - The GitHub environment `release` allows deployments only from `main`, and the job runs in it.
   - The `mordoc` package on npm trusts `release.yml` in `getmordoc/mordoc`, environment `release`, as a trusted publisher.
@@ -33,5 +33,5 @@
 - **D-001:** npm trusted publishing, because no token has to be stored or renewed, and npm adds provenance on its own. Rejected: an `NPM_TOKEN` secret.
 - **D-002:** Publish to npm before the tag and release, because a failed publish then leaves nothing on GitHub. Rejected: tag and release first.
 - **D-003:** Labels from the branch name with `actions/labeler`, because the branch names already carry the type and GitHub's release notes group by label. Rejected: labels added by hand.
-- **D-004:** The version pull request is opened with the workflow's own token, because it only changes the version number, which the release just tested. GitHub runs no workflows on such a pull request; closing and reopening it runs the tests. Rejected: a GitHub App or personal token.
+- **D-004:** The workflow pushes the version branch with its own token and the maintainer opens the pull request, because GitHub Actions may not create or approve pull requests in `getmordoc`. Rejected: a GitHub App or personal token.
 - **D-005:** The GitHub environment `release`, limited to `main`, because a workflow can be started on any branch and its own branch check can be removed there. Rejected: only the branch check in the workflow.

@@ -11,4 +11,4 @@ As a Mordoc maintainer, I want to release a new version with one click, so that 
 ## What
 - A release action on GitHub that tests the main branch, publishes the version to npm, and creates its tag and release.
 - Release notes generated from the pull requests in the version, grouped by type.
-- After a release, a pull request that raises the minor version for the work that follows.
+- After a release, a branch that raises the minor version for the work that follows, ready for a pull request.
