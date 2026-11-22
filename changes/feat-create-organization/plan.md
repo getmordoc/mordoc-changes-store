@@ -2,7 +2,6 @@
 
 **Proposal:** [proposal.md](./proposal.md)
 **Specification:** [spec.md](./spec.md)
-**QA plan:** [qa.md](./qa.md)
 
 ## Approach
 - Repositories to move, in this order: `mordoc-changes-store`, `mordoc-docs`, `create-mordoc-app`, `mordoc`. All are on the `shiva-varanasi` account today.

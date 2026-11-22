@@ -30,7 +30,7 @@
 - None
 
 ## Constraints
-- Until [content validation](../feat-markdoc-validation/proposal.md) is released, an advanced image inside a sentence or a link is not reported, and the page shows a browser error. The documentation tells writers to put an advanced image on its own line.
+- Until content validation (`feat-markdoc-validation`) is released, an advanced image inside a sentence or a link is not reported, and the page shows a browser error. The documentation tells writers to put an advanced image on its own line.
 
 ## Risks
 - Images with a title lose their visible caption, and have to become advanced images to keep it. The components example site has two; the Mordoc documentation has none.

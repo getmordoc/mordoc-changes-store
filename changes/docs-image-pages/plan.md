@@ -2,7 +2,6 @@
 
 **Proposal:** [proposal.md](./proposal.md)
 **Specification:** [spec.md](./spec.md)
-**QA plan:** [qa.md](./qa.md)
 
 ## Approach
 - All changes are in mordoc-docs, under `content/en`, `content/de` and `config/navigation`.

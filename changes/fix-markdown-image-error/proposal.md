@@ -41,7 +41,7 @@ As a site reader, I want pages with images to load with no errors, so that the p
   icon to open settings.
   <p></p>
   ```
-- This must be fixed before the [browser tests for the components example site](../test-e2e-components/proposal.md), which check that pages load with no errors.
+- This must be fixed before the browser tests for the components example site (`test-e2e-components`), which check that pages load with no errors.
 
 ## What
 - Pages with images load with no errors.

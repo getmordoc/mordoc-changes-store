@@ -1,8 +1,6 @@
 # Mark the Mordoc documentation's Markdoc examples: QA Plan
 
-**Proposal:** [proposal.md](./proposal.md)
-**Specification:** [spec.md](./spec.md)
-**Technical plan:** [plan.md](./plan.md)
+**Change:** `fix-mordoc-docs-code-blocks`
 
 ## Test Strategy
 - Build `mordoc-docs` from this change's branch with Mordoc's `main` (with content validation) and with the current release, and compare with `master`.

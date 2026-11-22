@@ -8,13 +8,15 @@ Mordoc is built with spec-driven development. Before any code is written, each c
 
 Every change has its own folder in [`changes/`](changes), named after its type and a short name, such as `feat-markdoc-validation` or `fix-accessibility`. The type is one of `feat`, `fix`, `refactor`, `perf`, `test`, `docs` or `chore`.
 
-| Document | What it says |
-|---|---|
-| `proposal.md` | The user story, why the change is needed and what we would like to have. |
-| `spec.md` | The requirements, acceptance criteria, boundaries and constraints. |
-| `plan.md` | What must exist to meet each requirement, in the order to build it, and the technical decisions. |
-
-Each code repository where the change is built has a folder with the same name in its own `changes/`, with `qa.md` (how the change is verified, decided before it is built) and `tasks.md` (the tasks to build it).
+```
+changes/fix-accessibility/
+├── proposal.md   the user story, why the change is needed and what we would like to have
+├── spec.md       the acceptance criteria, requirements, boundaries and constraints
+├── plan.md       what must exist to meet each requirement, and the technical decisions
+└── mordoc/       one subfolder for each repository where the change is built
+    ├── qa.md     how the change is verified there, decided before it is built
+    └── tasks.md  the tasks to build it there
+```
 
 ## Documentation
 

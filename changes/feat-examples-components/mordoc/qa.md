@@ -1,11 +1,9 @@
 # Components example site: QA Plan
 
-**Proposal:** [proposal.md](./proposal.md)
-**Specification:** [spec.md](./spec.md)
-**Technical plan:** [plan.md](./plan.md)
+**Change:** `feat-examples-components`
 
 ## Test Strategy
-- Manual checks in Chrome, on the built site and in the development server. The automated checks come with the [browser tests for this site](../test-e2e-components/proposal.md).
+- Manual checks in Chrome, on the built site and in the development server. The automated checks come with the browser tests for this site (`test-e2e-components`).
 - Mordoc's own code must stay unchanged.
 - Setup: Node.js 24.18.1 or later. In the repository root `npm install` and `npm run build`, then in `examples/components`:
   - `npm run build` and `python3 -m http.server 4173 -d dist`, then open http://localhost:4173

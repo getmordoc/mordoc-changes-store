@@ -1,8 +1,6 @@
 # Repository basics: QA Plan
 
-**Proposal:** [proposal.md](./proposal.md)
-**Specification:** [spec.md](./spec.md)
-**Technical plan:** [plan.md](./plan.md)
+**Change:** `chore-repository-basics`
 
 ## Test Strategy
 - Check each repository's files on its branch, and its GitHub page after merging. Compare the LICENSE and AUTHORS files with the texts in the plan.

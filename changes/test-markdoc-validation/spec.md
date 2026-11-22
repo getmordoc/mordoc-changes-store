@@ -22,7 +22,7 @@
 - None
 
 ## Constraints
-- [Content validation](../feat-markdoc-validation/proposal.md) is built before these tests.
+- Content validation (`feat-markdoc-validation`) is built before these tests.
 
 ## Risks
 - None

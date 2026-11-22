@@ -1,8 +1,6 @@
 # Diagrams on landing pages: QA Plan
 
-**Proposal:** [proposal.md](./proposal.md)
-**Specification:** [spec.md](./spec.md)
-**Technical plan:** [plan.md](./plan.md)
+**Change:** `fix-landing-diagram-component`
 
 ## Test Strategy
 - Build the components example site from this change's branch, and open its landing page and diagrams page in Chrome, in light and dark theme. Every other component on the landing page must look as it does on `main`.
