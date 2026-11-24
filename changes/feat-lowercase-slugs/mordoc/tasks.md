@@ -8,7 +8,7 @@
 - [x] **T-002 (FR-001, FR-007, FR-008):** Check the names of pages and their folders, with build tests.
 - [x] **T-003 (FR-001):** Check the author's part of an API page's address, with build tests.
 - [x] **T-004 (FR-002, FR-003):** Make page and API addresses lowercase, with build tests.
-- [ ] **T-005 (FR-002):** Make the language in an address lowercase, in the build and the app, with build tests.
+- [x] **T-005 (FR-002):** Make the language in an address lowercase, in the build and the app, with build tests.
 - [ ] **T-006 (FR-004, FR-008):** Report duplicate addresses over all languages and API pages, with build tests.
 - [ ] **T-007 (FR-006):** Add `createRouteResolver`, with the addresses of the operations known before the pages are transformed.
 - [ ] **T-008 (FR-005, FR-006):** Replace and check paths in pages and enrichment files, remove the missing link from the example site, with build tests.
