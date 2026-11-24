@@ -6,7 +6,7 @@
 ## Tasks
 - [x] **T-001 (FR-007):** Let `ContentValidator` keep problems that don't come from Markdoc, and report each problem once.
 - [x] **T-002 (FR-001, FR-007, FR-008):** Check the names of pages and their folders, with build tests.
-- [ ] **T-003 (FR-001):** Check the author's part of an API page's address, with build tests.
+- [x] **T-003 (FR-001):** Check the author's part of an API page's address, with build tests.
 - [x] **T-004 (FR-002, FR-003):** Make page and API addresses lowercase, with build tests.
 - [ ] **T-005 (FR-002):** Make the language in an address lowercase, in the build and the app, with build tests.
 - [ ] **T-006 (FR-004, FR-008):** Report duplicate addresses over all languages and API pages, with build tests.
