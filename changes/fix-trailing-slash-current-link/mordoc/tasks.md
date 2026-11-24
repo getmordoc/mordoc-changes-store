@@ -5,4 +5,4 @@
 
 ## Tasks
 - [x] **T-001 (FR-001):** Mark the sidenav leaf as current with `samePath`, and let `samePath` ignore letter case.
-- [ ] **T-002 (FR-001):** Add the browser test for a page opened with a slash at the end.
+- [x] **T-002 (FR-001):** Add the browser test for a page opened with a slash at the end.
