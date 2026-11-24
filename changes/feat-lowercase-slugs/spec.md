@@ -15,15 +15,18 @@
 ## Functional Requirements
 - **FR-001:** The names of pages, without `.md`, and of the folders they are in contain only letters `a-z` and `A-Z`, digits, hyphens and underscores, and start with a letter or a digit.
   - This also applies to an author's own part of an API page's address.
+  - Files and folders whose name starts with a dot are skipped.
+  - A file that ends in `.md` in another letter case, such as `FOO.MD`, gives an error that asks to rename it.
 - **FR-002:** The address of a page is its folder and file names in lowercase, also in the built folders, the sitemap and the address given to search engines.
   - A file named `index`, in any letter case, is the page of its folder.
-  - The language and the author's own part of an API page's address are also in lowercase.
+  - The language, such as `/pt-br` for `pt-BR`, and the author's own part of an API page's address are also in lowercase.
 - **FR-003:** Pages belong together as translations when their addresses are the same without the language.
 - **FR-004:** No two pages have the same address, over all languages and API pages together. The error names both files, or the file and the API operation.
 - **FR-005:** A path to a page is found in any letter case, and the built site uses the page's address. This covers the side, top and header navigation, the footer, and links, buttons and cards in pages and in the texts for the API reference.
   - A slash at the end of the path is ignored, and anything from a `?` or `#` is kept as written.
   - A variable in a path is filled in first.
 - **FR-006:** A path to a page in the navigation or in a page leads to an existing page or a file in `public`. Other websites and links to a heading on the same page are left as they are.
+  - A path without a slash at the start, such as `image`, `./image` or `google.com`, gives an error that asks for a slash at the start for a page or file of the site, or `https://` for another website.
 - **FR-007:** Each error names the file, what is wrong and, when there is one, the correct name or path. All name and path errors are reported together.
 - **FR-008:** Errors stop the build. The preview reports name and path errors and keeps running; two pages with the same address stop it when it starts.
 - **FR-009:** The preview applies the same rules when it starts and after each saved file.
@@ -43,7 +46,4 @@
 - A reader who types capital letters in an address still gets "page not found" on hosts that find files case-sensitively.
 
 ## Open Issues
-- The components example site links to `/guide/does-not-exist` on purpose, to show a missing page, and would stop building. Remove the link, or show a missing page another way?
-- Is the language in an address also in lowercase, such as `/pt-br` for `pt-BR`? FR-002 says yes.
-- How are paths without a slash at the start checked, such as `image` or `./image`? Proposed: an error that asks for a path that starts with a slash.
-- Is a file that ends in `.MD` a page? It is skipped without a message. Proposed: an error that asks to rename it.
+- None
