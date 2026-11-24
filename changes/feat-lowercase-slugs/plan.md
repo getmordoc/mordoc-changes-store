@@ -11,10 +11,11 @@
   - The pipeline creates the validator before it loads the content, and passes it to every step that checks names or paths.
   - A fallback page isn't validated again, so each problem is reported once.
 - **FR-001:**
-  - `src/core/content/names.ts` has `ALLOWED_NAME`, `/^[A-Za-z0-9][A-Za-z0-9_-]*$/`, and a function that gives the problem of one name, with the characters that aren't allowed.
-  - `loadContent` lists files only, skips a file when its name or one of its folders starts with a dot, checks each folder and file name of a page, reports every problem, and leaves a page with a problem out.
+  - `src/core/content/names.ts` has `validateName(name)`, which checks `/^[A-Za-z0-9][A-Za-z0-9_-]*$/` and gives `{ valid: true }`, or `{ valid: false, error }` with the characters that aren't allowed.
+  - `listMarkdocFiles` in `src/core/list-markdoc-files.ts` lists the Markdoc files, with `.md` in any letter case, for pages and for enrichment: it leaves out folders, keeps symbolic links to files, and skips a file when its name or one of its folders starts with a dot.
+  - `loadContent` checks each folder and file name of a page, reports every problem, and leaves a page with a problem out.
   - A file that ends in `.md` in another letter case is reported.
-  - Each part of `routePrefix`, or the `id` when there is no `routePrefix`, is checked with the same function.
+  - The `id` of an API and each part of its `routePrefix` are checked with the same function, in place of the `id`'s own expression in `registry-loader.ts`.
 - **FR-002:**
   - `buildEntry` makes `segments` and `routePath` lowercase, and finds `index` in any letter case; `filePath` stays as it is on disk.
   - `languagePrefix(language, defaultLanguage)` in `src/core/content/route-path.ts` gives the lowercase prefix for the loader, the API pages, the canonical address and the search index.
