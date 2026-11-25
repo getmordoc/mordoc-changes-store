@@ -48,6 +48,7 @@ A path of FR-005 leads to a page or to a file in `public`. When it doesn't, the 
 
 - A path to a file in `public` has the same letter case as the file.
 - A path to a folder in `public` with an `index.html`, such as `/demo/`, leads to that file.
+- A path in the side or top navigation gives an error when it leads to a page in another language than the default, such as `/de/guide`.
 - A path to another website, such as `https://example.com`, and a link to a heading on the same page, such as `#top`, aren't checked.
 - A path to a page of an API isn't reported when the API's OpenAPI file can't be loaded, because that file has its own error.
 - A path without a slash at the start, such as `image`, `./image` or `google.com`, gives an error that asks for a slash at the start, or for `https://` when it is another website.

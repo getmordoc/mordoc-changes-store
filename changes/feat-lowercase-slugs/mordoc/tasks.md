@@ -86,7 +86,7 @@
 
 - [ ] **T-021 (FR-006): Report wrong paths in the navigation and footer**
 
-  Add an error to `BuildReport`, with the file and the label or footer line, when a path of T-019 or T-020 leads to no page or file. In the side and top navigation, a path must lead to a page of the default language.
+  Add an error to `BuildReport`, with the file and the label or footer line, when a path of T-019 or T-020 leads to no page or file. Also add an error when a path in the side or top navigation leads to a page in another language than the default.
 
 - [ ] **T-022 (FR-006): Remove the old check for API paths**
 
