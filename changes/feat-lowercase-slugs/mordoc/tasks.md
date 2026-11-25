@@ -80,7 +80,7 @@
 
   Change the paths in the side, top and header navigation to the page's lowercase path in the built site.
 
-- [ ] **T-020 (FR-005): Make the footer use the page's path**
+- [x] **T-020 (FR-005): Make the footer use the page's path**
 
   Change the links in footer lines to the page's lowercase path. Change them in the translations of these lines too, so each translation is still found.
 
