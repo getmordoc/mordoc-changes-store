@@ -17,4 +17,5 @@ None
 - The paths of pages are always lowercase.
 - Authors write paths in any letter case, in the navigation and in links inside pages, and the built site uses the page's lowercase path.
 - The build stops with a clear error for a name that isn't allowed, two pages with the same path, or a path without a page.
-- The paths and errors are the same while previewing the site locally and when building it, also after saving a file; the preview keeps running while the author fixes an error.
+- The preview of the site has the same paths and errors as the build, also after the author saves a file.
+- The preview keeps running while the author fixes an error.
