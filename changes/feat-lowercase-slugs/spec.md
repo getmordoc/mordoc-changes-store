@@ -74,7 +74,7 @@ The same site gives the same paths and errors on macOS, Linux and Windows.
 - The author's files are never changed, because they belong to the author.
 
 ## Constraints
-- It is released in Mordoc 2.2.0, together with `fix-trailing-slash-current-link`.
+- It is released in Mordoc 2.2.0, together with `fix-trailing-slash-current-link` and `fix-file-links`.
 
 ## Risks
 - Authors lose pages and texts for the API reference that are symbolic links, because Mordoc no longer follows these links in `content` and in the folders with these texts. The release notes say this.

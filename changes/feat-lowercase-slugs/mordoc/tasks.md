@@ -76,7 +76,7 @@
 
   Write build tests for T-013 to T-016: a path in any letter case leads to the page, and a wrong path is reported with its file and line. Test each kind of link, a variable, and descriptions in OpenAPI files, also with a variable named `routeMap`.
 
-- [ ] **T-019 (FR-005): Make the navigation use the page's path**
+- [x] **T-019 (FR-005): Make the navigation use the page's path**
 
   Change the paths in the side, top and header navigation to the page's lowercase path in the built site.
 
