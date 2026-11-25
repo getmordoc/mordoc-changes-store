@@ -60,7 +60,7 @@
 
   Let `RouteMap` find the page or the file in `public` that a path leads to, such as the page `/guide` for `/Guide/`. When there is none, `RouteMap` gives the text of the error.
 
-- [ ] **T-015 (FR-005): Make links use the page's path**
+- [x] **T-015 (FR-005): Make links use the page's path**
 
   Change the path in Markdown links and in the `link`, `button` and `card` tags to the page's lowercase path in the built site. Do this in pages and enrichment files. Links in the descriptions of OpenAPI files stay as written.
 
@@ -72,7 +72,7 @@
 
   Delete the link to `/guide/does-not-exist` from the components example site, because it is now an error.
 
-- [ ] **T-018 (FR-005, FR-006): Test the links in pages and enrichment files**
+- [x] **T-018 (FR-005, FR-006): Test the links in pages and enrichment files**
 
   Write build tests for T-013 to T-016: a path in any letter case leads to the page, and a wrong path is reported with its file and line. Test each kind of link, a variable, and descriptions in OpenAPI files, also with a variable named `routeMap`.
 
