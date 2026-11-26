@@ -24,14 +24,22 @@
 
   In `applyMordocWatchBatch`, rerun the full pipeline after a failed page or config update, and not after a failed full run, so the preview prints the list once.
 
-- [x] **T-006 (FR-001): Test that each problem is listed once**
+- [ ] **T-006 (FR-002): Add a thrown error to the report**
+
+  Add `BuildReport.addLegacyError(error)`, which adds the error as a problem without a file, with the level `error`, and with its stack when the report is made with `verbose`. In `runPipeline`, add the error of a stage that throws with `addLegacyError`, print the report, and stop with `ValidationFailedError`.
+
+- [ ] **T-007 (FR-003): Print the message of a failed full run in the preview**
+
+  When the full pipeline fails in the preview, print the error's message, not the error with its stack.
+
+- [x] **T-008 (FR-001): Test that each problem is listed once**
 
   Add `test/build/errors/config/language.json` with `en`, `de` and `fr`, so the existing build test of that site checks that each problem is printed once.
 
-- [x] **T-007 (FR-002): Test the list when an OpenAPI file can't be loaded**
+- [ ] **T-009 (FR-002): Test the list when an OpenAPI file can't be loaded**
 
-  Add the site `test/build/missing-api/` of AC-002 with its `expected.txt`, and a build test in `test/build/validation.test.ts` that checks the problem is printed before the OpenAPI error and the build stops.
+  Add the site `test/build/missing-api/` of AC-002 with its `expected.txt`, and build tests in `test/build/validation.test.ts`: without `--verbose`, the list has the page problem and the OpenAPI error without a stack, and the build stops; with `--verbose`, the error has its stack.
 
-- [x] **T-008 (FR-003): Test the problems in the preview**
+- [ ] **T-010 (FR-003): Test the problems in the preview**
 
-  Add a test in `test/build/validation.test.ts` that copies `test/build/errors/` to a temporary folder, starts `mordoc dev` on it, and checks the problems of AC-003.
+  Add a test in `test/build/validation.test.ts` that copies `test/build/errors/` to a temporary folder, starts `mordoc dev` on it, and checks the problems of AC-003. It waits for the line that Mordoc prints after each list, never for a time.
