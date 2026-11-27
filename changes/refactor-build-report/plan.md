@@ -20,7 +20,9 @@
   - The page and config updates of `applyMordocWatchBatch` are in `applyTargetedUpdate`, which returns `false` when the batch needs the full pipeline.
   - `applyTargetedUpdate` creates one `BuildReport` for the pages saved together, gives it to each `reparsePage`, and prints it once.
   - `applyMordocWatchBatch` reruns the full pipeline after a failed update only when the update was a page or config update, not when it was already a full run.
-  - When the full pipeline fails in the preview, the preview prints the error's message, not the error with its stack.
+  - When the full pipeline fails in the preview, the preview prints the error's message, and its stack only with `--verbose`.
+  - When a page or config update fails in the preview, the preview prints nothing, because the full pipeline that follows lists the error, and prints the error with its stack only with `--verbose`.
+  - `describeError(error, verbose)` in `src/core/build-report.ts` gives the message, or the stack with `verbose`, for `addLegacyError` and the preview.
 
 ## Decisions
 - **D-001:** A fallback entry isn't validated, because it has the same text and config as the page in the default language. Rejected: removing repeated lines from the list.
